@@ -20,7 +20,7 @@ h1 { font-size: 1rem; font-weight: 600; margin: 0; opacity: .7; letter-spacing: 
 .slide .card { position: absolute; border-radius: 6px; }
 .slide .t { position: absolute; margin: 0; line-height: 1.2; }
 .slide .t.title { white-space: nowrap; }
-.slide .t p { margin: 0 0 .45em; }
+.slide .t p { margin: 0 0 .45em; font-size: 0; }
 .slide .t p:last-child { margin-bottom: 0; }
 .disp { font-family: Oswald, "Arial Narrow", "Helvetica Neue", sans-serif; letter-spacing: .01em; }
 .body { font-family: Inter, Arial, Helvetica, sans-serif; }
@@ -43,9 +43,22 @@ details.notes p { margin: .6em 0 0; }
 .stage:fullscreen .slide-wrap { width: min(100vw, calc(100vh * 16 / 9)); margin: 0 auto; }
 .stage:fullscreen .slide { border-radius: 0; box-shadow: none; }
 .stage:fullscreen .notes { display: none; }
-.stage:fullscreen .controls { position: fixed; bottom: 14px; left: 50%; transform: translateX(-50%); margin: 0; padding: 8px 12px; background: rgba(0,0,0,.55); border-radius: 12px; opacity: .25; transition: opacity .25s; }
-.stage:fullscreen .controls:hover, .stage:fullscreen:focus-within .controls { opacity: 1; }
-.hint { text-align: center; font-size: 13px; opacity: .55; margin-top: 8px; }</style>
+
+
+.hint { text-align: center; font-size: 13px; opacity: .55; margin-top: 8px; }.stage.pseudo-fs { position: fixed; inset: 0; width: 100vw; height: 100vh; height: 100dvh; max-width: none; margin: 0; padding: 0; background: #000; z-index: 9999; display: flex; flex-direction: column; justify-content: center; }
+.stage.pseudo-fs .slide-wrap { width: min(100vw, calc(100vh * 16 / 9)); width: min(100vw, calc(100dvh * 16 / 9)); margin: 0 auto; }
+.stage.pseudo-fs .slide { border-radius: 0; box-shadow: none; }
+.stage.pseudo-fs .notes { display: none; }
+.stage:fullscreen .controls, .stage.pseudo-fs .controls { position: fixed; bottom: 12px; left: 50%; transform: translateX(-50%); margin: 0; padding: 8px 10px; background: rgba(0,0,0,.7); border-radius: 12px; opacity: 1; z-index: 10000; width: max-content; max-width: calc(100vw - 24px); }
+.stage:fullscreen .hint, .stage.pseudo-fs .hint { display: none; }
+.controls button.exit-btn { background: #7a1f1f; border-color: #a33; }
+.stage.pseudo-fs .slide-wrap, .stage:fullscreen .slide-wrap { cursor: pointer; }
+.edge-nav { display: none; position: fixed; top: 50%; transform: translateY(-50%); z-index: 10001; width: 14vw; min-width: 56px; max-width: 120px; height: 36vh; min-height: 120px; align-items: center; justify-content: center; font-size: 56px; line-height: 1; color: #fff; background: rgba(0,0,0,.35); border: none; border-radius: 14px; cursor: pointer; opacity: .85; -webkit-tap-highlight-color: transparent; }
+.edge-nav:disabled { opacity: .15; }
+.edge-nav.left { left: 8px; }
+.edge-nav.right { right: 8px; }
+.stage:fullscreen .edge-nav, .stage.pseudo-fs .edge-nav { display: flex; }
+</style>
 </head>
 <body>
 <div class="stage" id="stage">
@@ -121,7 +134,7 @@ details.notes p { margin: .6em 0 0; }
     <img class="abs" src="assets/image30.png" alt="" style="left:0.000%;top:0.000%;width:100.000%;height:100.000%">
     <div class="t title" style="left:3.565%;top:9.397%;width:39.038%"><p style="text-align:left"><span class="disp" style="font-size:6.4966cqw;color:#FFFFFF;font-weight:700">Fun Facts and</span></p></div>
     <div class="t title" style="left:3.664%;top:21.515%;width:29.103%"><p style="text-align:left"><span class="disp" style="font-size:7.0134cqw;color:#EFA630;font-weight:700">Summary</span></p></div>
-    <div class="t" style="left:3.662%;top:83.234%;width:43.971%"><p style="text-align:left"><span class="body" style="font-size:2.1908cqw;color:#EFA630;font-weight:700">What planet would you like to explore?</span></p></div>
+    <div class="t" style="left:3.662%;top:83.234%;width:43.971%"><p style="text-align:left"><span class="body" style="font-size:2.0374cqw;color:#EFA630;font-weight:700">What planet would you like to explore?</span></p></div>
     <img class="abs" src="assets/image31.png" alt="" style="left:46.411%;top:37.407%;width:5.981%;height:12.646%">
     <img class="abs" src="assets/image32.png" alt="" style="left:52.333%;top:37.407%;width:6.041%;height:10.521%">
     <img class="abs" src="assets/image33.png" alt="" style="left:58.313%;top:43.677%;width:9.569%;height:14.665%">
@@ -133,18 +146,20 @@ details.notes p { margin: .6em 0 0; }
     <img class="abs" src="assets/image39.png" alt="" style="left:41.627%;top:0.000%;width:58.373%;height:100.000%">
     <div class="card" style="left:3.646%;top:38.611%;width:42.708%;height:8.519%;background:linear-gradient(135deg,#081A2Dd1,#19324Cd1)"></div>
     <div class="t title" style="left:4.948%;top:39.537%;width:6.510%"><p style="text-align:left"><span class="disp" style="font-size:0.7578cqw;color:#ECA62E;font-weight:700">JUPITER</span></p></div>
-    <div class="t" style="left:4.948%;top:42.222%;width:39.323%"><p style="text-align:left"><span class="body" style="font-size:1.0389cqw;color:#F8F8F8;font-weight:400">About 11&#215; wider than Earth; about 1,300 Earths could fit inside it.</span></p></div>
+    <div class="t" style="left:4.948%;top:42.222%;width:39.323%"><p style="text-align:left"><span class="body" style="font-size:0.9662cqw;color:#F8F8F8;font-weight:400">About 11&#215; wider than Earth; about 1,300 Earths could fit inside it.</span></p></div>
     <div class="card" style="left:3.646%;top:48.796%;width:42.708%;height:8.519%;background:linear-gradient(135deg,#081A2Dd1,#19324Cd1)"></div>
     <div class="t title" style="left:4.948%;top:49.722%;width:6.510%"><p style="text-align:left"><span class="disp" style="font-size:0.7578cqw;color:#ECA62E;font-weight:700">SATURN</span></p></div>
-    <div class="t" style="left:4.948%;top:52.407%;width:39.323%"><p style="text-align:left"><span class="body" style="font-size:1.0389cqw;color:#F8F8F8;font-weight:400">Its rings are mostly ice, with some rock and dust; they span about 270,000 km—roughly 21 Earth diameters.</span></p></div>
+    <div class="t" style="left:4.948%;top:52.407%;width:39.323%"><p style="text-align:left"><span class="body" style="font-size:0.9662cqw;color:#F8F8F8;font-weight:400">Its rings are mostly ice, with some rock and dust; they span about 270,000 km—roughly 21 Earth diameters.</span></p></div>
     <div class="card" style="left:3.646%;top:59.444%;width:42.708%;height:8.519%;background:linear-gradient(135deg,#081A2Dd1,#19324Cd1)"></div>
     <div class="t title" style="left:4.948%;top:60.370%;width:6.510%"><p style="text-align:left"><span class="disp" style="font-size:0.7578cqw;color:#ECA62E;font-weight:700">EARTH</span></p></div>
-    <div class="t" style="left:4.948%;top:63.056%;width:39.323%"><p style="text-align:left"><span class="body" style="font-size:1.0389cqw;color:#F8F8F8;font-weight:400">The only world currently known to support life.</span></p></div>
-    <div class="card" style="left:3.646%;top:70.093%;width:42.708%;height:8.519%;background:linear-gradient(135deg,#081A2Dd1,#19324Cd1)"></div>
+    <div class="t" style="left:4.948%;top:63.056%;width:39.323%"><p style="text-align:left"><span class="body" style="font-size:0.9662cqw;color:#F8F8F8;font-weight:400">The only world currently known to support life.</span></p></div>
+    <div class="card" style="left:3.646%;top:70.093%;width:42.708%;height:11.728%;background:linear-gradient(135deg,#081A2Dd1,#19324Cd1)"></div>
     <div class="t title" style="left:4.948%;top:71.019%;width:6.510%"><p style="text-align:left"><span class="disp" style="font-size:0.7578cqw;color:#ECA62E;font-weight:700">VENUS</span></p></div>
-    <div class="t" style="left:4.948%;top:73.704%;width:39.323%"><p style="text-align:left"><span class="body" style="font-size:1.0389cqw;color:#F8F8F8;font-weight:400">Mercury is closest to the Sun, but Venus is the hottest planet. Venus has a thick carbon-dioxide atmosphere that traps heat through a powerful greenhouse effect, while Mercury has almost no atmosphere to hold heat.</span></p></div>
+    <div class="t" style="left:4.948%;top:73.704%;width:39.323%"><p style="text-align:left"><span class="body" style="font-size:0.9662cqw;color:#F8F8F8;font-weight:400">Mercury is closest to the Sun, but Venus is the hottest planet. Venus has a thick carbon-dioxide atmosphere that traps heat through a powerful greenhouse effect, while Mercury has almost no atmosphere to hold heat.</span></p></div>
   </div>
 </section>
+    <button class="edge-nav left" id="edgePrev" aria-label="Previous slide">&#8249;</button>
+  <button class="edge-nav right" id="edgeNext" aria-label="Next slide">&#8250;</button>
   <div class="controls">
     <button id="prev" aria-label="Previous slide">&#8249; Prev</button>
     <span id="count" aria-live="polite">1 / 1</span>
@@ -161,7 +176,10 @@ details.notes p { margin: .6em 0 0; }
   var prev = document.getElementById('prev');
   var next = document.getElementById('next');
   var fs = document.getElementById('fs');
+  var edgePrev = document.getElementById('edgePrev');
+  var edgeNext = document.getElementById('edgeNext');
   var idx = 0;
+  var pseudo = false;
 
   function show(i) {
     if (i < 0) i = 0;
@@ -171,20 +189,62 @@ details.notes p { margin: .6em 0 0; }
     count.textContent = (idx + 1) + ' / ' + slides.length;
     prev.disabled = idx === 0;
     next.disabled = idx === slides.length - 1;
+    edgePrev.disabled = idx === 0;
+    edgeNext.disabled = idx === slides.length - 1;
     try { history.replaceState(null, '', '#' + (idx + 1)); } catch (e) {}
   }
   function go(d) { show(idx + d); }
 
+  function isFull() { return !!document.fullscreenElement || pseudo; }
+  function updateLabel() {
+    if (isFull()) {
+      fs.innerHTML = '&#x2715; Exit';
+      fs.classList.add('exit-btn');
+      fs.setAttribute('aria-label', 'Exit full screen');
+    } else {
+      fs.innerHTML = '&#x26F6; Full screen';
+      fs.classList.remove('exit-btn');
+      fs.setAttribute('aria-label', 'Enter full screen');
+    }
+  }
+  function enter() {
+    var done = false;
+    try {
+      if (stage.requestFullscreen) {
+        var p = stage.requestFullscreen();
+        if (p && p.catch) p.catch(function () { pseudo = true; stage.classList.add('pseudo-fs'); updateLabel(); });
+        done = true;
+      }
+    } catch (e) {}
+    if (!done) { pseudo = true; stage.classList.add('pseudo-fs'); }
+    if (pseudo) stage.classList.add('pseudo-fs');
+    updateLabel();
+  }
+  function exit() {
+    pseudo = false;
+    stage.classList.remove('pseudo-fs');
+    try { if (document.fullscreenElement) document.exitFullscreen(); } catch (e) {}
+    updateLabel();
+  }
+  function toggleFullscreen() { if (isFull()) exit(); else enter(); }
+
   prev.addEventListener('click', function () { go(-1); });
   next.addEventListener('click', function () { go(1); });
-
-  function toggleFullscreen() {
-    try {
-      if (document.fullscreenElement) { document.exitFullscreen(); }
-      else if (stage.requestFullscreen) { stage.requestFullscreen(); }
-    } catch (e) {}
-  }
+  edgePrev.addEventListener('click', function (e) { e.stopPropagation(); go(-1); });
+  edgeNext.addEventListener('click', function (e) { e.stopPropagation(); go(1); });
   fs.addEventListener('click', toggleFullscreen);
+  document.addEventListener('fullscreenchange', function () {
+    if (!document.fullscreenElement && pseudo === false) { stage.classList.remove('pseudo-fs'); }
+    updateLabel();
+  });
+
+  // Tap the slide in full screen: left third = back, rest = forward
+  stage.addEventListener('click', function (e) {
+    if (!isFull()) return;
+    if (e.target.closest && e.target.closest('.controls')) return;
+    var r = stage.getBoundingClientRect();
+    if (e.clientX < r.left + r.width * 0.33) go(-1); else go(1);
+  });
 
   document.addEventListener('keydown', function (e) {
     if (e.target && /INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
@@ -194,7 +254,7 @@ details.notes p { margin: .6em 0 0; }
       case 'Home': e.preventDefault(); show(0); break;
       case 'End': e.preventDefault(); show(slides.length - 1); break;
       case 'f': case 'F': toggleFullscreen(); break;
-      case 'Escape': if (document.fullscreenElement) document.exitFullscreen(); break;
+      case 'Escape': if (pseudo) exit(); break;
     }
   });
 
@@ -209,7 +269,7 @@ details.notes p { margin: .6em 0 0; }
 
   var start = parseInt((location.hash || '').replace('#', ''), 10);
   show(isNaN(start) ? 0 : start - 1);
-})();
-</script>
+  updateLabel();
+})();</script>
 </body>
 </html>
