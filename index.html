@@ -30,8 +30,8 @@ details.notes { margin-top: 12px; background: #111c2b; border-radius: 8px; paddi
 details.notes summary { cursor: pointer; font-weight: 600; color: #eca62e; }
 details.notes p { margin: .6em 0 0; }
 
-.stage { min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 8px; box-sizing: border-box; }
-.stage .slide-wrap { width: min(calc(100vw - 16px), calc((100vh - 96px) * 16 / 9)); width: min(calc(100vw - 16px), calc((100dvh - 96px) * 16 / 9)); }
+.stage { min-height: 100vh; display: block; padding: 8px; box-sizing: border-box; text-align: center; }
+.stage .slide-wrap { width: 100%; max-width: 1280px; margin: 0 auto; text-align: left; }
 .stage .controls { margin-top: 8px; }
 .stage .hint { margin-top: 4px; }
 .js .slide-wrap { display: none; }
@@ -43,13 +43,13 @@ html:not(.js) .controls, html:not(.js) .hint { display: none; }
 .controls button:disabled { opacity: .35; cursor: default; }
 #count { font-variant-numeric: tabular-nums; min-width: 64px; text-align: center; font-weight: 600; opacity: .85; }
 .stage:fullscreen { max-width: none; width: 100vw; height: 100vh; padding: 0; margin: 0; background: #000; display: flex; flex-direction: column; justify-content: center; }
-.stage:fullscreen .slide-wrap { width: min(100vw, calc(100vh * 16 / 9)); margin: 0 auto; }
+.stage:fullscreen .slide-wrap { width: 100%; max-width: none; margin: 0 auto; }
 .stage:fullscreen .slide { border-radius: 0; box-shadow: none; }
 .stage:fullscreen .notes { display: none; }
 
 
 .hint { text-align: center; font-size: 13px; opacity: .55; margin-top: 8px; }.stage.pseudo-fs { position: fixed; top: 0; right: 0; bottom: 0; left: 0; width: 100vw; height: 100vh; height: 100dvh; max-width: none; margin: 0; padding: 0; background: #000; z-index: 9999; display: flex; flex-direction: column; justify-content: center; }
-.stage.pseudo-fs .slide-wrap { width: min(100vw, calc(100vh * 16 / 9)); width: min(100vw, calc(100dvh * 16 / 9)); margin: 0 auto; }
+.stage.pseudo-fs .slide-wrap { width: 100%; max-width: none; margin: 0 auto; }
 .stage.pseudo-fs .slide { border-radius: 0; box-shadow: none; }
 .stage.pseudo-fs .notes { display: none; }
 .stage:fullscreen .controls, .stage.pseudo-fs .controls { position: fixed; bottom: 12px; left: 50%; transform: translateX(-50%); margin: 0; padding: 8px 10px; background: rgba(0,0,0,.7); border-radius: 12px; opacity: 1; z-index: 10000; width: max-content; max-width: calc(100vw - 24px); }
