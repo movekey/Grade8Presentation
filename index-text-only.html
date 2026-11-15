@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grade 8 Science: The Solar System</title>
+<meta name="description" content="Grade 8 Science slide deck: Exploring Astronomy - The Solar System.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script>document.documentElement.className += ' js';</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@500;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@500;700&display=swap"></noscript>
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #05090f; color: #f8f8f8; font-family: Inter, Arial, Helvetica, sans-serif; }
+main { max-width: 1280px; margin: 0 auto; padding: 24px 16px 48px; display: flex; flex-direction: column; gap: 32px; }
+h1 { font-size: 1rem; font-weight: 600; margin: 0; opacity: .7; letter-spacing: .04em; }
+.slide-wrap { margin: 0; }
+.slide { position: relative; width: 100%; height: 0; padding-bottom: 56.25%; container-type: inline-size; overflow: hidden; background: #081a2d; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,.45); }
+.slide img.abs { position: absolute; display: block; }
+.slide .card { position: absolute; border-radius: 6px; }
+.slide .t { position: absolute; margin: 0; line-height: 1.2; }
+.slide .t.title { white-space: nowrap; }
+.slide .t p { margin: 0 0 .45em; font-size: 0; }
+.slide .t p:last-child { margin-bottom: 0; }
+.disp { font-family: Oswald, "Arial Narrow", "Helvetica Neue", sans-serif; letter-spacing: .01em; }
+.body { font-family: Inter, Arial, Helvetica, sans-serif; }
+details.notes { margin-top: 12px; background: #111c2b; border-radius: 8px; padding: 10px 16px; font-size: .95rem; line-height: 1.5; }
+details.notes summary { cursor: pointer; font-weight: 600; color: #eca62e; }
+details.notes p { margin: .6em 0 0; }
+
+.stage { min-height: 100vh; display: block; padding: 8px; box-sizing: border-box; text-align: center; }
+.stage .slide-wrap { width: 100%; max-width: 1280px; margin: 0 auto; text-align: left; }
+.stage .controls { margin-top: 8px; }
+.stage .hint { margin-top: 4px; }
+.js .slide-wrap { display: none; }
+.js .slide-wrap.active { display: block; }
+html:not(.js) .controls, html:not(.js) .hint { display: none; }
+.controls { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 14px; flex-wrap: wrap; }
+.controls button { font: inherit; font-size: 15px; font-weight: 600; color: #f8f8f8; background: #1b2a3e; border: 1px solid #2d4262; border-radius: 8px; padding: 9px 16px; cursor: pointer; min-width: 44px; }
+.controls button:hover, .controls button:focus-visible { background: #24395a; outline: none; border-color: #eca62e; }
+.controls button:disabled { opacity: .35; cursor: default; }
+#count { font-variant-numeric: tabular-nums; min-width: 64px; text-align: center; font-weight: 600; opacity: .85; }
+.stage:fullscreen { max-width: none; width: 100vw; height: 100vh; padding: 0; margin: 0; background: #000; display: flex; flex-direction: column; justify-content: center; }
+.stage:fullscreen .slide-wrap { width: 100%; max-width: none; margin: 0 auto; }
+.stage:fullscreen .slide { border-radius: 0; box-shadow: none; }
+.stage:fullscreen .notes { display: none; }
+
+
+.hint { text-align: center; font-size: 13px; opacity: .55; margin-top: 8px; }.stage.pseudo-fs { position: fixed; top: 0; right: 0; bottom: 0; left: 0; width: 100vw; height: 100vh; height: 100dvh; max-width: none; margin: 0; padding: 0; background: #000; z-index: 9999; display: flex; flex-direction: column; justify-content: center; }
+.stage.pseudo-fs .slide-wrap { width: 100%; max-width: none; margin: 0 auto; }
+.stage.pseudo-fs .slide { border-radius: 0; box-shadow: none; }
+.stage.pseudo-fs .notes { display: none; }
+.stage:fullscreen .controls, .stage.pseudo-fs .controls { position: fixed; bottom: 12px; left: 50%; transform: translateX(-50%); margin: 0; padding: 8px 10px; background: rgba(0,0,0,.7); border-radius: 12px; opacity: 1; z-index: 10000; width: max-content; max-width: calc(100vw - 24px); }
+.stage:fullscreen .hint, .stage.pseudo-fs .hint { display: none; }
+.controls button.exit-btn { background: #7a1f1f; border-color: #a33; }
+.stage.pseudo-fs .slide-wrap, .stage:fullscreen .slide-wrap { cursor: pointer; }
+.edge-nav { display: none; position: fixed; top: 50%; transform: translateY(-50%); z-index: 10001; width: 14vw; min-width: 56px; max-width: 120px; height: 36vh; min-height: 120px; align-items: center; justify-content: center; font-size: 56px; line-height: 1; color: #fff; background: rgba(0,0,0,.35); border: none; border-radius: 14px; cursor: pointer; opacity: .85; -webkit-tap-highlight-color: transparent; }
+.edge-nav:disabled { opacity: .15; }
+.edge-nav.left { left: 8px; }
+.edge-nav.right { right: 8px; }
+.stage:fullscreen .edge-nav, .stage.pseudo-fs .edge-nav { display: flex; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+<section class="slide-wrap" id="slide-1">
+  <div class="slide">
+    <div class="t title" style="left:4.310%;top:18.142%;width:23.143%"><p style="text-align:left"><span class="disp" style="font-size:5.6846vw;font-size:5.6846cqw;color:#F9F9F9;font-weight:700">Exploring</span></p></div>
+    <div class="t title" style="left:4.252%;top:31.172%;width:28.885%"><p style="text-align:left"><span class="disp" style="font-size:5.6846vw;font-size:5.6846cqw;color:#F9F9F9;font-weight:700">Astronomy:</span></p></div>
+    <div class="t title" style="left:4.125%;top:44.309%;width:41.636%"><p style="text-align:left"><span class="disp" style="font-size:5.4408vw;font-size:5.4408cqw;color:#F0AD2D;font-weight:700">The Solar System</span></p></div>
+    <div class="t title" style="left:4.382%;top:61.052%;width:15.916%"><p style="text-align:left"><span class="body" style="font-size:2.1264vw;font-size:2.1264cqw;color:#FFFFFF;font-weight:400">Grade 8 Science</span></p></div>
+  </div>
+</section>
+<section class="slide-wrap" id="slide-2">
+  <div class="slide">
+    <div class="t title" style="left:4.037%;top:7.808%;width:50.370%"><p style="text-align:left"><span class="disp" style="font-size:6.7363vw;font-size:6.7363cqw;color:#F8F8F8;font-weight:700">Our Solar System</span></p></div>
+    <div class="t title" style="left:4.273%;top:20.984%;width:26.834%"><p style="text-align:left"><span class="disp" style="font-size:6.7363vw;font-size:6.7363cqw;color:#ECA62E;font-weight:700">Overview</span></p></div>
+    <div class="t title" style="left:12.116%;top:90.174%;width:5.033%"><p style="text-align:center"><span class="disp" style="font-size:1.3842vw;font-size:1.3842cqw;color:#FFFFFF;font-weight:500">Mercury</span></p></div>
+    <div class="t title" style="left:30.308%;top:90.174%;width:3.219%"><p style="text-align:center"><span class="disp" style="font-size:1.3842vw;font-size:1.3842cqw;color:#FFFFFF;font-weight:500">Earth</span></p></div>
+    <div class="t title" style="left:39.419%;top:90.174%;width:3.161%"><p style="text-align:center"><span class="disp" style="font-size:1.3842vw;font-size:1.3842cqw;color:#FFFFFF;font-weight:500">Mars</span></p></div>
+    <div class="t title" style="left:51.742%;top:90.174%;width:4.297%"><p style="text-align:center"><span class="disp" style="font-size:1.3842vw;font-size:1.3842cqw;color:#FFFFFF;font-weight:500">Jupiter</span></p></div>
+    <div class="t title" style="left:67.553%;top:90.174%;width:4.022%"><p style="text-align:center"><span class="disp" style="font-size:1.3842vw;font-size:1.3842cqw;color:#FFFFFF;font-weight:500">Saturn</span></p></div>
+    <div class="t title" style="left:80.419%;top:90.174%;width:4.365%"><p style="text-align:center"><span class="disp" style="font-size:1.3842vw;font-size:1.3842cqw;color:#FFFFFF;font-weight:500">Uranus</span></p></div>
+    <div class="t title" style="left:89.946%;top:90.174%;width:5.232%"><p style="text-align:center"><span class="disp" style="font-size:1.3842vw;font-size:1.3842cqw;color:#FFFFFF;font-weight:500">Neptune</span></p></div>
+    <div class="t title" style="left:21.188%;top:90.174%;width:3.882%"><p style="text-align:center"><span class="disp" style="font-size:1.3842vw;font-size:1.3842cqw;color:#FFFFFF;font-weight:500">Venus</span></p></div>
+    <div class="t" style="left:4.948%;top:35.833%;width:33.854%"><p style="text-align:left"><span class="body" style="font-size:1.3188vw;font-size:1.3188cqw;color:#F8F8F8;font-weight:400">Eight planets orbit the Sun in a set order.</span></p><p style="text-align:left"><span class="body" style="font-size:1.3188vw;font-size:1.3188cqw;color:#F8F8F8;font-weight:400">Gravity pulls them inward, while orbital motion carries them around the Sun.</span></p></div>
+    <div class="card" style="left:43.750%;top:20.833%;width:22.396%;height:21.759%;background:linear-gradient(135deg,#081A2Dd1,#28435Dd1)"></div>
+    <div class="card" style="left:67.448%;top:20.833%;width:27.865%;height:21.759%;background:linear-gradient(135deg,#081A2Dd1,#28435Dd1)"></div>
+    <div class="t title" style="left:45.573%;top:22.778%;width:18.750%"><p style="text-align:left"><span class="disp" style="font-size:0.8750vw;font-size:0.8750cqw;color:#ECA62E;font-weight:700">INNER PLANETS</span></p></div>
+    <div class="t" style="left:45.573%;top:26.667%;width:18.750%"><p style="text-align:left"><span class="body" style="font-size:1.1806vw;font-size:1.1806cqw;color:#F8F8F8;font-weight:400">Mercury  •  Venus  •  Earth  •  Mars</span></p></div>
+    <div class="t" style="left:45.573%;top:31.389%;width:18.229%"><p style="text-align:left"><span class="body" style="font-size:1.1806vw;font-size:1.1806cqw;color:#F8F8F8;font-weight:400">Small, rocky worlds closest to the Sun.</span></p></div>
+    <div class="t title" style="left:69.271%;top:22.778%;width:23.438%"><p style="text-align:left"><span class="disp" style="font-size:0.8750vw;font-size:0.8750cqw;color:#ECA62E;font-weight:700">OUTER PLANETS</span></p></div>
+    <div class="t" style="left:69.271%;top:26.667%;width:23.438%"><p style="text-align:left"><span class="body" style="font-size:1.1806vw;font-size:1.1806cqw;color:#F8F8F8;font-weight:400">Jupiter  •  Saturn  •  Uranus  •  Neptune</span></p></div>
+    <div class="t" style="left:69.271%;top:31.389%;width:22.917%"><p style="text-align:left"><span class="body" style="font-size:1.1806vw;font-size:1.1806cqw;color:#F8F8F8;font-weight:400">Much larger gas or ice giants in the outer system.</span></p></div>
+    <div class="card" style="left:43.750%;top:44.444%;width:51.563%;height:12.500%;background:linear-gradient(135deg,#081A2Dd1,#28435Dd1)"></div>
+    <div class="t title" style="left:45.573%;top:46.111%;width:9.896%"><p style="text-align:left"><span class="disp" style="font-size:0.8166vw;font-size:0.8166cqw;color:#ECA62E;font-weight:700">ASTEROID BELT</span></p></div>
+    <div class="t" style="left:45.573%;top:48.704%;width:10.417%"><p style="text-align:left"><span class="body" style="font-size:1.1104vw;font-size:1.1104cqw;color:#F8F8F8;font-weight:400">Between Mars and Jupiter</span></p></div>
+    <div class="t title" style="left:60.417%;top:46.111%;width:7.292%"><p style="text-align:left"><span class="disp" style="font-size:0.8166vw;font-size:0.8166cqw;color:#ECA62E;font-weight:700">COMETS</span></p></div>
+    <div class="t" style="left:60.417%;top:49.074%;width:15.625%"><p style="text-align:left"><span class="body" style="font-size:1.1104vw;font-size:1.1104cqw;color:#F8F8F8;font-weight:400">Icy objects that can grow glowing tails near the Sun</span></p></div>
+    <div class="t title" style="left:79.948%;top:46.111%;width:6.250%"><p style="text-align:left"><span class="disp" style="font-size:0.8166vw;font-size:0.8166cqw;color:#ECA62E;font-weight:700">ORBIT</span></p></div>
+    <div class="t" style="left:79.948%;top:49.074%;width:12.760%"><p style="text-align:left"><span class="body" style="font-size:1.1104vw;font-size:1.1104cqw;color:#F8F8F8;font-weight:400">Gravity keeps planets on their paths</span></p></div>
+  </div>
+</section>
+<section class="slide-wrap" id="slide-3">
+  <div class="slide">
+    <div class="t title" style="left:3.565%;top:9.397%;width:39.038%"><p style="text-align:left"><span class="disp" style="font-size:6.4966vw;font-size:6.4966cqw;color:#FFFFFF;font-weight:700">Fun Facts and</span></p></div>
+    <div class="t title" style="left:3.664%;top:21.515%;width:29.103%"><p style="text-align:left"><span class="disp" style="font-size:7.0134vw;font-size:7.0134cqw;color:#EFA630;font-weight:700">Summary</span></p></div>
+    <div class="t" style="left:3.662%;top:83.234%;width:43.971%"><p style="text-align:left"><span class="body" style="font-size:2.0374vw;font-size:2.0374cqw;color:#EFA630;font-weight:700">What planet would you like to explore?</span></p></div>
+    <div class="card" style="left:3.646%;top:38.611%;width:42.708%;height:8.519%;background:linear-gradient(135deg,#081A2Dd1,#19324Cd1)"></div>
+    <div class="t title" style="left:4.948%;top:39.537%;width:6.510%"><p style="text-align:left"><span class="disp" style="font-size:0.7578vw;font-size:0.7578cqw;color:#ECA62E;font-weight:700">JUPITER</span></p></div>
+    <div class="t" style="left:4.948%;top:42.222%;width:39.323%"><p style="text-align:left"><span class="body" style="font-size:0.9662vw;font-size:0.9662cqw;color:#F8F8F8;font-weight:400">About 11&#215; wider than Earth; about 1,300 Earths could fit inside it.</span></p></div>
+    <div class="card" style="left:3.646%;top:48.796%;width:42.708%;height:8.519%;background:linear-gradient(135deg,#081A2Dd1,#19324Cd1)"></div>
+    <div class="t title" style="left:4.948%;top:49.722%;width:6.510%"><p style="text-align:left"><span class="disp" style="font-size:0.7578vw;font-size:0.7578cqw;color:#ECA62E;font-weight:700">SATURN</span></p></div>
+    <div class="t" style="left:4.948%;top:52.407%;width:39.323%"><p style="text-align:left"><span class="body" style="font-size:0.9662vw;font-size:0.9662cqw;color:#F8F8F8;font-weight:400">Its rings are mostly ice, with some rock and dust; they span about 270,000 km—roughly 21 Earth diameters.</span></p></div>
+    <div class="card" style="left:3.646%;top:59.444%;width:42.708%;height:8.519%;background:linear-gradient(135deg,#081A2Dd1,#19324Cd1)"></div>
+    <div class="t title" style="left:4.948%;top:60.370%;width:6.510%"><p style="text-align:left"><span class="disp" style="font-size:0.7578vw;font-size:0.7578cqw;color:#ECA62E;font-weight:700">EARTH</span></p></div>
+    <div class="t" style="left:4.948%;top:63.056%;width:39.323%"><p style="text-align:left"><span class="body" style="font-size:0.9662vw;font-size:0.9662cqw;color:#F8F8F8;font-weight:400">The only world currently known to support life.</span></p></div>
+    <div class="card" style="left:3.646%;top:70.093%;width:42.708%;height:11.728%;background:linear-gradient(135deg,#081A2Dd1,#19324Cd1)"></div>
+    <div class="t title" style="left:4.948%;top:71.019%;width:6.510%"><p style="text-align:left"><span class="disp" style="font-size:0.7578vw;font-size:0.7578cqw;color:#ECA62E;font-weight:700">VENUS</span></p></div>
+    <div class="t" style="left:4.948%;top:73.704%;width:39.323%"><p style="text-align:left"><span class="body" style="font-size:0.9662vw;font-size:0.9662cqw;color:#F8F8F8;font-weight:400">Mercury is closest to the Sun, but Venus is the hottest planet. Venus has a thick carbon-dioxide atmosphere that traps heat through a powerful greenhouse effect, while Mercury has almost no atmosphere to hold heat.</span></p></div>
+  </div>
+</section>
+    <button class="edge-nav left" id="edgePrev" aria-label="Previous slide">&#8249;</button>
+  <button class="edge-nav right" id="edgeNext" aria-label="Next slide">&#8250;</button>
+  <div class="controls">
+    <button id="prev" aria-label="Previous slide">&#8249; Prev</button>
+    <span id="count" aria-live="polite">1 / 1</span>
+    <button id="next" aria-label="Next slide">Next &#8250;</button>
+    <button id="fs" aria-label="Toggle full screen">&#x26F6; Full screen</button>
+  </div>
+  <div class="hint">Keys: &larr; &rarr; to change slide &middot; F for full screen &middot; Esc to exit</div>
+</div>
+<script>
+(function () {
+  var stage = document.getElementById('stage');
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide-wrap'));
+  var count = document.getElementById('count');
+  var prev = document.getElementById('prev');
+  var next = document.getElementById('next');
+  var fs = document.getElementById('fs');
+  var edgePrev = document.getElementById('edgePrev');
+  var edgeNext = document.getElementById('edgeNext');
+  var idx = 0;
+  var pseudo = false;
+
+  function show(i) {
+    if (i < 0) i = 0;
+    if (i > slides.length - 1) i = slides.length - 1;
+    idx = i;
+    slides.forEach(function (s, k) { s.classList.toggle('active', k === idx); });
+    count.textContent = (idx + 1) + ' / ' + slides.length;
+    prev.disabled = idx === 0;
+    next.disabled = idx === slides.length - 1;
+    edgePrev.disabled = idx === 0;
+    edgeNext.disabled = idx === slides.length - 1;
+    try { history.replaceState(null, '', '#' + (idx + 1)); } catch (e) {}
+  }
+  function go(d) { show(idx + d); }
+
+  function isFull() { return !!document.fullscreenElement || pseudo; }
+  function updateLabel() {
+    if (isFull()) {
+      fs.innerHTML = '&#x2715; Exit';
+      fs.classList.add('exit-btn');
+      fs.setAttribute('aria-label', 'Exit full screen');
+    } else {
+      fs.innerHTML = '&#x26F6; Full screen';
+      fs.classList.remove('exit-btn');
+      fs.setAttribute('aria-label', 'Enter full screen');
+    }
+  }
+  function enter() {
+    var done = false;
+    try {
+      if (stage.requestFullscreen) {
+        var p = stage.requestFullscreen();
+        if (p && p.catch) p.catch(function () { pseudo = true; stage.classList.add('pseudo-fs'); updateLabel(); });
+        done = true;
+      }
+    } catch (e) {}
+    if (!done) { pseudo = true; stage.classList.add('pseudo-fs'); }
+    if (pseudo) stage.classList.add('pseudo-fs');
+    updateLabel();
+  }
+  function exit() {
+    pseudo = false;
+    stage.classList.remove('pseudo-fs');
+    try { if (document.fullscreenElement) document.exitFullscreen(); } catch (e) {}
+    updateLabel();
+  }
+  function toggleFullscreen() { if (isFull()) exit(); else enter(); }
+
+  prev.addEventListener('click', function () { go(-1); });
+  next.addEventListener('click', function () { go(1); });
+  edgePrev.addEventListener('click', function (e) { e.stopPropagation(); go(-1); });
+  edgeNext.addEventListener('click', function (e) { e.stopPropagation(); go(1); });
+  fs.addEventListener('click', toggleFullscreen);
+  document.addEventListener('fullscreenchange', function () {
+    if (!document.fullscreenElement && pseudo === false) { stage.classList.remove('pseudo-fs'); }
+    updateLabel();
+  });
+
+  // Tap the slide in full screen: left third = back, rest = forward
+  stage.addEventListener('click', function (e) {
+    if (!isFull()) return;
+    if (e.target.closest && e.target.closest('.controls')) return;
+    var r = stage.getBoundingClientRect();
+    if (e.clientX < r.left + r.width * 0.33) go(-1); else go(1);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.target && /INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
+    switch (e.key) {
+      case 'ArrowRight': case 'PageDown': case ' ': case 'Enter': e.preventDefault(); go(1); break;
+      case 'ArrowLeft': case 'PageUp': case 'Backspace': e.preventDefault(); go(-1); break;
+      case 'Home': e.preventDefault(); show(0); break;
+      case 'End': e.preventDefault(); show(slides.length - 1); break;
+      case 'f': case 'F': toggleFullscreen(); break;
+      case 'Escape': if (pseudo) exit(); break;
+    }
+  });
+
+  var tx = null;
+  stage.addEventListener('touchstart', function (e) { tx = e.touches[0].clientX; }, { passive: true });
+  stage.addEventListener('touchend', function (e) {
+    if (tx === null) return;
+    var dx = e.changedTouches[0].clientX - tx;
+    if (Math.abs(dx) > 50) go(dx < 0 ? 1 : -1);
+    tx = null;
+  });
+
+  var start = parseInt((location.hash || '').replace('#', ''), 10);
+  show(isNaN(start) ? 0 : start - 1);
+  updateLabel();
+})();</script>
+</body>
+</html>
